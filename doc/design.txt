@@ -1,0 +1,10 @@
+2d game api
+- rendering
+- art
+- physics
+- music
+
+context creation, platform wrapping: sdl2
+image loading: stbi
+physics: box2d
+music: sdl2
