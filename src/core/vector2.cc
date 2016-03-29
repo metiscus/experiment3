@@ -40,6 +40,7 @@ void Vector2::ToUnit()
 
 bool Vector2::IsUnit() const
 {
+    const float mag = 1.0f / (Length() + FLT_EPSILON);
     return (fabs(mag - 1.0) < FLT_EPSILON);
 }
 
