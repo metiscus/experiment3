@@ -97,3 +97,17 @@ Vector2 operator*(const float& lhs, const Vector2& rhs)
     return rhs * lhs;
 }
 
+float Vector2::Dot(const Vector2& rhs) const
+{
+    return x_*rhs.x_+y_*rhs.y_;
+}
+
+float Vector2::ScalarProjection(const Vector2& rhs) const
+{
+    return Dot(rhs) / rhs.Length();
+}
+
+Vector2 Vector2::Projection(const Vector2& rhs) const
+{
+    return (Dot(rhs) / rhs.Dot(rhs)) * rhs;
+}
