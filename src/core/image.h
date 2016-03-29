@@ -1,4 +1,5 @@
 #pragma once
+#include "precompile.h"
 
 #include <cstdint>
 #include <string>
