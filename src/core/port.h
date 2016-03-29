@@ -32,4 +32,12 @@
 #define unlikely(expr) (expr)
 #endif
 
+
+#if defined(ENV_OS_WIN32) && !defined(ENV_OS_CYGWIN)
+#define WIN32_LEAN_AND_MEAN 1
+#define NOMINMAX 1
+#include <windows.h>
+#endif
+
+
 #endif
