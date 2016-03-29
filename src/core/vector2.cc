@@ -28,7 +28,7 @@ float Vector2::Length2() const
 Vector2 Vector2::AsUnit() const
 {
     const float mag = 1.0f / (Length() + FLT_EPSILON);
-    return Vector(x_*mag, y_*mag);
+    return Vector2(x_*mag, y_*mag);
 }
 
 void Vector2::ToUnit()
