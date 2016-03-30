@@ -1,7 +1,9 @@
 lib_LTLIBRARIES=libcore.la
-libcore_la_CXXFLAGS=-ffast-math $(SDL2_CFLAGS) $(OPENGL_CFLAGS)
+libcore_la_CXXFLAGS=-Iextern -ffast-math $(SDL2_CFLAGS) $(OPENGL_CFLAGS)
 libcore_la_LDFLAGS=$(OPENGL_LIBS) $(SDL2_LIBS)
 libcore_la_SOURCES=\
+	extern/glad/glad.c\
+	extern/glad/glad.h\
 	core/image.cc\
 	core/image.h\
 	core/image.inl\
