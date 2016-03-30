@@ -1,7 +1,7 @@
-lib_LTLIBRARIES=libcore.la
-libcore_la_CXXFLAGS=-Iextern -ffast-math $(SDL2_CFLAGS) $(OPENGL_CFLAGS)
-libcore_la_LDFLAGS=$(OPENGL_LIBS) $(SDL2_LIBS)
-libcore_la_SOURCES=\
+lib_LTLIBRARIES=libbengine_core.la
+libbengine_core_la_CXXFLAGS=-Iextern -ffast-math $(SDL2_CFLAGS) $(OPENGL_CFLAGS)
+libbengine_core_la_LDFLAGS=$(OPENGL_LIBS) $(SDL2_LIBS)
+libbengine_core_la_SOURCES=\
 	extern/glad/glad.c\
 	extern/glad/glad.h\
 	core/image.cc\
@@ -27,5 +27,7 @@ libcore_la_SOURCES=\
 	core/transform.h\
 	core/transform.cc\
 	core/precompile.h\
-	core/precompile.cc
+	core/precompile.cc\
+	core/camera.h\
+	core/camera.cc
 

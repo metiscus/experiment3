@@ -1,6 +1,8 @@
 #include "node.h"
+#include <algorithm>
 
 Node::Node()
+    : layer_(0)
 {
 
 }
@@ -61,3 +63,7 @@ void Node::SetTransform(const Transform& transform)
     transform_ = transform;
 }
 
+void Node::SetLayer(const uint32_t& layer)
+{
+    layer_ = layer;
+}

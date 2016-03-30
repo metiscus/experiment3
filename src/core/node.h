@@ -1,9 +1,11 @@
 #ifndef src_node_h_
 #define src_node_h_
 
-#include "precompile.h"
+#include <cstdint>
 #include "rectangle.h"
 #include "transform.h"
+#include <memory>
+#include <vector>
 
 class Node;
 typedef std::shared_ptr<Node> NodePtr;
@@ -14,6 +16,7 @@ private:
     Transform transform_;
     Rectangle bound_;
     std::vector<NodePtr> children_;
+    uint32_t layer_;
 
 public:
     Node();
@@ -31,6 +34,9 @@ public:
     Transform& GetTransform();
     const Transform& GetTransform() const;
     void SetTransform(const Transform& transform);
+
+    inline uint32_t GetLayer() const { return layer_; }
+    void SetLayer(const uint32_t& layer);
 
 };
 
