@@ -3,8 +3,7 @@
 
 #include "precompile.h"
 #include "rectangle.h"
-
-class Transform;
+#include "transform.h"
 
 class Node;
 typedef std::shared_ptr<Node> NodePtr;
