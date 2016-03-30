@@ -10,6 +10,7 @@ public:
     Rectangle(float x, float y, float w, float h);
     void SetCenter(const Vector2& center);
     void SetExtents(const Vector2& extents);
+    void ExpandBy(const Rectangle& other);
     const Vector2& GetCenter() const;
     const Vector2& GetExtents() const;
     const Vector2& GetMin() const;
@@ -17,6 +18,8 @@ public:
     
     bool ContainsPoint(const Vector2& point) const;
     bool Intersects(const Rectangle& other) const;
+
+    void Reset();
 private:
     Vector2 center_;
     Vector2 extents_;
