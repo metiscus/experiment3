@@ -11,11 +11,11 @@ public:
     void SetCenter(const Vector2& center);
     void SetExtents(const Vector2& extents);
     void ExpandBy(const Rectangle& other);
-    const Vector2& GetCenter() const;
-    const Vector2& GetExtents() const;
-    const Vector2& GetMin() const;
-    const Vector2& GetMax() const;
-    
+    inline const Vector2& GetCenter() const { return center_; }
+    inline const Vector2& GetExtents() const { return extents_; }
+    inline const Vector2& GetMin() const { return min_; }
+    inline const Vector2& GetMax() const { return max_; }
+
     bool ContainsPoint(const Vector2& point) const;
     bool Intersects(const Rectangle& other) const;
 

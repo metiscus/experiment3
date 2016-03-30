@@ -47,25 +47,6 @@ void Rectangle::ExpandBy(const Rectangle& other)
     extents_ = max_ - min_;
 }
 
-const Vector2& Rectangle::GetCenter() const
-{
-    return center_;
-}
-
-const Vector2& Rectangle::GetExtents() const
-{
-    return extents_;
-}
-
-const Vector2& Rectangle::GetMin() const
-{
-    return min_;
-}
-
-const Vector2& Rectangle::GetMax() const
-{
-    return max_;
-}
 
 bool Rectangle::ContainsPoint(const Vector2& point) const
 {
