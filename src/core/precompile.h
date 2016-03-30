@@ -12,5 +12,14 @@
 #include <cstdlib>
 #include <cstring>
 
+#include <algorithm>
+#include <array>
+#include <functional>
+#include <map>
+#include <memory>
+#include <string>
+#include <unordered_map>
+#include <utility>
+#include <vector>
 
 #endif
