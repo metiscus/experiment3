@@ -10,6 +10,8 @@
 class Node;
 typedef std::shared_ptr<Node> NodePtr;
 
+class Visitor;
+
 class Node
 {
 private:
@@ -38,6 +40,7 @@ public:
     inline uint32_t GetLayer() const { return layer_; }
     void SetLayer(const uint32_t& layer);
 
+    virtual void Apply(Visitor& visitor);
 };
 
 #endif

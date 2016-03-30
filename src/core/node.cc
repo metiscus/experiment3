@@ -1,5 +1,6 @@
 #include "node.h"
 #include <algorithm>
+#include "visitor.h"
 
 Node::Node()
     : layer_(0)
@@ -66,4 +67,13 @@ void Node::SetTransform(const Transform& transform)
 void Node::SetLayer(const uint32_t& layer)
 {
     layer_ = layer;
+}
+
+void Node::Apply(Visitor& visitor)
+{
+    visitor.Visit(*this);
+    for(auto child : children_)
+    {
+        child->Apply(visitor);
+    }
 }
