@@ -29,5 +29,7 @@ libbengine_core_la_SOURCES=\
 	core/precompile.h\
 	core/precompile.cc\
 	core/camera.h\
-	core/camera.cc
+	core/camera.cc\
+	core/font.h\
+	core/font.cc
 
