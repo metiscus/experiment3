@@ -1,6 +1,7 @@
 #pragma once
 
 #include <cstdint>
+#include <memory>
 #include <vector>
 
 class Image;
@@ -57,3 +58,5 @@ private:
     
     void SetTextureParameter(uint32_t param, uint32_t value);
 };
+
+typedef std::shared_ptr<Texture> TexturePtr;
